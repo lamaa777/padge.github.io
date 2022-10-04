@@ -1,0 +1,205 @@
+/*кейфрейм разметка*/
+
+@keyframes animate {
+    0%,
+    100% {
+        clip-path: polygon(
+            0% 45%,
+            15% 44%,
+            32% 50%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+        );
+    }
+    50% {
+        clip-path: polygon(
+            0% 60%,
+            16% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+        );
+    }
+}
+
+/*РАЗМЕТКА ДЛЯ МЕНЮ*/
+
+@media (max-width: 1050px) {
+    .logo {
+        padding-right: 40%;
+    }
+    .navbar__wrap .menu {
+        display: none;
+    }
+
+    .hamb {
+        display: flex;
+        align-items: center;
+    }
+
+    .hamb__field {
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    .bar {
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 6px auto;
+        background-color: #fff;
+        transition: 0.2s;
+    }
+
+    .popup {
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        z-index: 100;
+        display: flex;
+        transition: 0.3s;
+    }
+
+    .popup.open {
+        left: 0;
+    }
+
+    .popup .menu {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 50px 0;
+        overflow: auto;
+    }
+
+    .popup .menu > li {
+        width: 100%;
+    }
+
+    .popup .menu > li > a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: #3f3f3f;
+    }
+
+    .popup .menu > li > a:hover {
+        background-color: rgba(122, 82, 179, 0.1);
+    }
+
+    .hamb__field.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamb__field.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamb__field.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    body.noscroll {
+        overflow: hidden;
+    }
+}
+
+/*РАЗМЕТКА ДЛЯ ХЕДЕР_ТЕКСТА*/
+
+@media (max-width: 1050px) {
+    .content h2 {
+        font-size: 6em;
+    }
+}
+
+@media (max-width: 768px) {
+    .headet-text h1 {
+        font-size: 60px;
+    }
+
+    .content h2 {
+        font-size: 4em;
+    }
+}
+@media (max-width: 500px) {
+    .content h2 {
+        font-size: 48px;
+    }
+}
+
+/* Разметка для карточек */
+
+@media (max-width: 1280px) {
+    .cards {
+        display: block;
+        padding-top: 300px;
+    }
+    .card1,
+    .card2,
+    .card3,
+    .card4 {
+        margin: 20px 3px;
+    }
+}
+
+/* Разметка для КНОПКИ */
+
+@media (max-width: 500px) {
+    .custom-btn {
+        width: 204px;
+        height: 54px;
+    }
+    .btn-3 span {
+        font-size: 20px;
+    }
+}
+
+/*Разметка для футера*/
+
+.icon1,
+.icon2,
+.icon3 {
+    margin-right: 20px;
+}
+.icon1,
+.icon2,
+.icon3,
+.icon4 {
+    width: 40px;
+}
+
+/*Разметка для слайдера*/
+
+@media (max-width: 500px) {
+    .swiper-img {
+        width: 194px;
+        height: 135px;
+    }
+}
+
+/*Разметка для слайдера*/
+
+@media (max-width: 500px) {
+    .about-us-text {
+        font-size: 14px;
+        margin-right: 0;
+        margin-left: 10px;
+    }
+}
